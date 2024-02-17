@@ -1,0 +1,19 @@
+{
+  "name": "kwin-api",
+  "version": "6.0.0",
+  "description": "KWin Scripting API (TypeScript Bindings)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeroxoneafour/kwin-api.git"
+  },
+  "keywords": [
+    "kwin",
+    "bindings"
+  ],
+  "author": "Vaughan Milliman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zeroxoneafour/kwin-api/issues"
+  },
+  "homepage": "https://github.com/zeroxoneafour/kwin-api#readme"
+}
