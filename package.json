@@ -1,8 +1,8 @@
 {
   "name": "kwin-api",
-  "version": "6.0.0",
+  "version": "6.0.2",
   "description": "KWin Scripting API (TypeScript Bindings)",
-  "main": "src/index.d.ts",
+  "main": "src/index.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zeroxoneafour/kwin-api.git"
