@@ -1,16 +1,15 @@
-import QPoint from "./qml/qpoint";
-import QRect from "./qml/qrect";
-import QSize from "./qml/qsize";
-import Signal from "./qml/signal";
+import QPoint from "./qt/qpoint";
+import QRect from "./qt/qrect";
+import QSize from "./qt/qsize";
+import Signal from "./qt/signal";
 
 import VirtualDesktop from "./virtualdesktop";
 import Window from "./window";
 import Output from "./output";
 import TileManager from "./tilemanager";
-import { ClientAreaOption } from "./enums";
+import {ClientAreaOption} from "./enums";
 
-export default interface Workspace
-{
+export default interface Workspace {
     desktops: VirtualDesktop[];
     currentDesktop: VirtualDesktop;
     activeWindow: Window | null;
@@ -41,7 +40,6 @@ export default interface Workspace
     getClient(id: number): Window;
     windowAt(point: QPoint, count?: number): Window[];
     isEffectActive(id: string): boolean;
-    windowList(): Window[];
 
     windowAdded: Signal<(window: Window) => void>;
     windowRemoved: Signal<(window: Window) => void>;

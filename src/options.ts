@@ -1,7 +1,6 @@
-import Signal from "./qml/signal";
+import Signal from "./qt/signal";
 
-export default interface Options
-{
+export default interface Options {
     focusPolicy: number;
     xwaylandCrashPolicy: number;
     xwaylandMaxCrashCount: number;

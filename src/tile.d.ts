@@ -1,11 +1,10 @@
-import QRect from "./qml/qrect";
-import Signal from "./qml/signal";
+import QRect from "./qt/qrect";
+import Signal from "./qt/signal";
 
 import Window from "./window";
-import { LayoutDirection, Edge } from "./enums";
+import {LayoutDirection, Edge} from "./enums";
 
-export default interface Tile
-{
+export default interface Tile {
     relativeGeometry: QRect;
     absoluteGeometry: QRect;
     absoluteGeometryInScreen: QRect;
@@ -17,12 +16,12 @@ export default interface Tile
     isLayout: boolean;
     canBeRemoved: boolean;
     layoutDirection: LayoutDirection;
-    
+
     resizeByPixels(delta: number, edge: Edge): void;
     moveByPixels(delta: number): void;
     remove(): void;
     split(direction: LayoutDirection): void;
-    
+
     relativeGeometryChanged: Signal<() => void>;
     absoluteGeometryChanged: Signal<() => void>;
     windowGeometryChanged: Signal<() => void>;

@@ -1,18 +1,17 @@
-import QRect from "./qml/qrect";
-import Signal from "./qml/signal";
+import QRect from "./qt/qrect";
+import Signal from "./qt/signal";
 
-export default interface Output
-{
+export default interface Output {
     geometry: QRect;
     devicePixelRatio: number;
     name: string;
     manufacturer: string;
     model: string;
     serialNumber: string;
-    
+
     mapToGlobal(rect: QRect): void;
     mapFromGlobal(rect: QRect): void;
-    
+
     geometryChanged: Signal<() => void>;
     enabledChanged: Signal<() => void>;
     scaleChanged: Signal<() => void>;

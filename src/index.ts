@@ -1,14 +1,16 @@
-import QPoint from "./qml/qpoint";
-import QRect from "./qml/qrect";
-import QSize from "./qml/qsize";
-import QIcon from "./qml/qicon";
-import QUuid from "./qml/quuid";
-import QTimer from "./qml/quuid";
-import Signal from "./qml/signal";
+import QPoint from "./qt/qpoint";
+import QRect from "./qt/qrect";
+import QSize from "./qt/qsize";
+import QIcon from "./qt/qicon";
+import QUuid from "./qt/quuid";
+import QTimer from "./qt/quuid";
+import Signal from "./qt/signal";
 
-import Workspace from "./workspace";
+import QmlWorkspace from "./qmlWorkspace";
+import JsWorkspace from "./jsWorkspace";
 import Options from "./options";
-import KWin from "./kwin";
+import QmlKWin from "./qmlKWin";
+import JsKWin from "./jsKWin";
 
 import VirtualDesktop from "./virtualdesktop";
 import Output from "./output";
@@ -16,11 +18,11 @@ import TileManager from "./tilemanager";
 import TileModel from "./tilemodel";
 import Tile from "./tile";
 import Window from "./window";
-import DBusCall from "./dbuscall";
-import { LayoutDirection, ClientAreaOption, Edge, MaximizeMode } from "./enums";
+import DBusCall from "./qml/dbuscall";
+import ShortcutHandler from "./qml/shortcutHandler";
+import {LayoutDirection, ClientAreaOption, Edge, MaximizeMode} from "./enums";
 
-export
-{
+export {
     QPoint,
     QRect,
     QSize,
@@ -28,9 +30,11 @@ export
     QUuid,
     QTimer,
     Signal,
-    Workspace,
+    QmlWorkspace,
+    JsWorkspace,
     Options,
-    KWin,
+    QmlKWin,
+    JsKWin,
     VirtualDesktop,
     Output,
     TileManager,
@@ -38,6 +42,7 @@ export
     Tile,
     Window,
     DBusCall,
+    ShortcutHandler,
     LayoutDirection,
     ClientAreaOption,
     Edge,

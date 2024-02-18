@@ -1,17 +1,16 @@
-import QRect from "./qml/qrect";
-import QPoint from "./qml/qpoint";
-import QSize from "./qml/qsize";
-import QUuid from "./qml/quuid";
-import QIcon from "./qml/qicon";
+import QRect from "./qt/qrect";
+import QPoint from "./qt/qpoint";
+import QSize from "./qt/qsize";
+import QUuid from "./qt/quuid";
+import Signal from "./qt/signal";
+import QIcon from "./qt/qicon";
 
 import Output from "./output";
 import Tile from "./tile";
 import VirtualDesktop from "./virtualdesktop";
-import Signal from "./qml/signal";
-import { MaximizeMode } from "./enums";
+import {MaximizeMode} from "./enums";
 
-export default interface Window
-{
+export default interface Window {
     bufferGeometry: QRect;
     clientGeometry: QRect;
     pos: QPoint;
@@ -98,11 +97,11 @@ export default interface Window
     hidden: boolean;
     tile: Tile | null;
     inputMethod: boolean;
-    
+
     closeWindow(): void;
     setReadyForPainting(): void;
     setMaximize(vertical: boolean, horizontal: boolean): void;
-    
+
     stackingOrderChanged: Signal<() => void>;
     shadeChanged: Signal<() => void>;
     opacityChanged: Signal<(window: Window, oldOpacity: number) => void>;
@@ -162,5 +161,5 @@ export default interface Window
     hiddenChanged: Signal<() => void>;
     hiddenByShowDesktopChanged: Signal<() => void>;
     lockScreenOverlayChanged: Signal<() => void>;
-    readyForPaintingChanged : Signal<() => void>;
+    readyForPaintingChanged: Signal<() => void>;
 }

@@ -1,5 +1,4 @@
-export default interface QSize
-{
+export default interface QSize {
     width: number;
     height: number;
 }

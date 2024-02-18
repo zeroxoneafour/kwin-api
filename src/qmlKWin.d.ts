@@ -1,4 +1,3 @@
-export default interface Kwin
-{
+export default interface QmlKWin {
     readConfig<T>(property: string, defaultValue: T): T;
 }
