@@ -5,10 +5,10 @@ export default interface DBusCall {
     service: string;
     path: string;
     method: string;
-    arguments: object[];
+    arguments: any[];
 
     call(): void;
 
-    finished: Signal<(returnValue: object[]) => void>;
+    finished: Signal<(returnValue: any[]) => void>;
     failed: Signal<() => void>;
 }
