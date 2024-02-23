@@ -3,7 +3,7 @@ import QRect from "./qt/qrect";
 import QSize from "./qt/qsize";
 import QIcon from "./qt/qicon";
 import QUuid from "./qt/quuid";
-import QTimer from "./qt/quuid";
+import QTimer from "./qt/qtimer";
 import Signal from "./qt/signal";
 
 import QmlWorkspace from "./qmlWorkspace";
