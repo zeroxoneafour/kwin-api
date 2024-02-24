@@ -1,7 +1,7 @@
-import QmlKWin from "./qmlKWin";
+import QmlKWin from "./qml/kwin";
 
 // js gets more stuff because they can't construct qml objects
-export default interface JsKWin extends QmlKWin {
+export default interface KWin extends QmlKWin {
     registerShortcut(name: string, desc: string, key: string, callback: Function): void;
     callDBus(service: string, path: string, interf: string, method: string, ...args: object[]): void;
     registerScreenEdge(edge: number, callback: Function): void;
