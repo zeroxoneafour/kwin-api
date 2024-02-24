@@ -1,17 +1,17 @@
-import QmlWorkspace from "./qmlWorkspace";
-import JsWorkspace from "./jsWorkspace";
+import type QmlWorkspace from "./qmlWorkspace";
+import type JsWorkspace from "./jsWorkspace";
 import Options from "./options";
-import QmlKWin from "./qmlKWin";
-import JsKWin from "./jsKWin";
+import type QmlKWin from "./qmlKWin";
+import type JsKWin from "./jsKWin";
 
-import VirtualDesktop from "./virtualdesktop";
-import Output from "./output";
-import TileManager from "./tilemanager";
-import TileModel from "./tilemodel";
-import Tile from "./tile";
-import Window from "./window";
-import DBusCall from "./qml/dbuscall";
-import ShortcutHandler from "./qml/shortcutHandler";
+import type VirtualDesktop from "./virtualdesktop";
+import type Output from "./output";
+import type TileManager from "./tilemanager";
+import type TileModel from "./tilemodel";
+import type Tile from "./tile";
+import type Window from "./window";
+import type DBusCall from "./qml/dbuscall";
+import type ShortcutHandler from "./qml/shortcutHandler";
 import {LayoutDirection, ClientAreaOption, Edge, MaximizeMode} from "./enums";
 
 export {

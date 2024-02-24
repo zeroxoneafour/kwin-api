@@ -1,8 +1,8 @@
 import QPoint from "./qt/qpoint";
 import Signal from "./qt/signal";
 
-import TileModel from "./tilemodel";
-import Tile from "./tile";
+import type TileModel from "./tilemodel";
+import type Tile from "./tile";
 
 export default interface TileManager {
     rootTile: Tile;

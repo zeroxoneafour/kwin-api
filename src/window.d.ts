@@ -5,9 +5,9 @@ import QUuid from "./qt/quuid";
 import Signal from "./qt/signal";
 import QIcon from "./qt/qicon";
 
-import Output from "./output";
-import Tile from "./tile";
-import VirtualDesktop from "./virtualdesktop";
+import type Output from "./output";
+import type Tile from "./tile";
+import type VirtualDesktop from "./virtualdesktop";
 import {MaximizeMode} from "./enums";
 
 export default interface Window {

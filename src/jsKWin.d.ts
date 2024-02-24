@@ -1,4 +1,4 @@
-import QmlKWin from "./qmlKWin";
+import type QmlKWin from "./qmlKWin";
 
 // js gets more stuff because they can't construct qml objects
 export default interface JsKWin extends QmlKWin {

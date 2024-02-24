@@ -1,4 +1,4 @@
-import Signal from "./signal";
+import type Signal from "./signal";
 
 export default interface QTimer {
     interval: number;

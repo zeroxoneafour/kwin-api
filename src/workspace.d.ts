@@ -3,10 +3,10 @@ import QRect from "./qt/qrect";
 import QSize from "./qt/qsize";
 import Signal from "./qt/signal";
 
-import VirtualDesktop from "./virtualdesktop";
-import Window from "./window";
-import Output from "./output";
-import TileManager from "./tilemanager";
+import type VirtualDesktop from "./virtualdesktop";
+import type Window from "./window";
+import type Output from "./output";
+import type TileManager from "./tilemanager";
 import {ClientAreaOption} from "./enums";
 
 export default interface Workspace {
