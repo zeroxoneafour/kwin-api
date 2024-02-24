@@ -78,14 +78,14 @@ export default interface Window {
     transient: boolean;
     transientFor: Window | null;
     modal: boolean;
-    frameGeometry: object;
+    frameGeometry: QRect;
     move: boolean;
     resize: boolean;
     decorationHasAlpha: boolean;
     noBorder: boolean;
     providesContextHelp: boolean;
     maximizable: boolean;
-    moveable: boolean;;
+    moveable: boolean;
     moveableAcrossScreens: boolean;
     resizeable: boolean;
     desktopFileName: string;
