@@ -8,8 +8,9 @@ import Window from "./window";
 import Output from "./output";
 import TileManager from "./tilemanager";
 import {ClientAreaOption} from "./enums";
+import Tile from "./tile";
 
-export default interface Workspace {
+export default interface BaseWorkspace {
     desktops: VirtualDesktop[];
     currentDesktop: VirtualDesktop;
     activeWindow: Window | null;
@@ -40,6 +41,7 @@ export default interface Workspace {
     getClient(id: number): Window;
     windowAt(point: QPoint, count?: number): Window[];
     isEffectActive(id: string): boolean;
+    rootTile(output: Output, desktop: VirtualDesktop): Tile;
 
     windowAdded: Signal<(window: Window) => void>;
     windowRemoved: Signal<(window: Window) => void>;
@@ -52,6 +54,6 @@ export default interface Workspace {
     activityAdded: Signal<(id: string) => void>;
     activityRemoved: Signal<(id: string) => void>;
     virtualScreenSizeChanged: Signal<() => void>;
-    currentDesktopChanged: Signal<(previousDesktop: VirtualDesktop) => void>;
+    currentDesktopChanged: Signal<(previousDesktop: VirtualDesktop, currentDesktop: VirtualDesktop, output: Output) => void>;
     cursorPosChanged: Signal<() => void>;
 }
