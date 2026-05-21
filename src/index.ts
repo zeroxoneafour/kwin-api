@@ -1,6 +1,7 @@
 import Workspace from "./workspace";
 import Options from "./options";
 import KWin from "./kwin";
+import Console from "./console";
 
 import VirtualDesktop from "./virtualdesktop";
 import Output from "./output";
@@ -14,6 +15,7 @@ export {
     Workspace,
     KWin,
     Options,
+    Console,
     VirtualDesktop,
     Output,
     TileManager,
