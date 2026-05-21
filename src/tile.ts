@@ -21,6 +21,8 @@ export default interface Tile {
     moveByPixels(delta: number): void;
     remove(): void;
     split(direction: LayoutDirection): void;
+    manage(window: Window): void;
+    unmanage(window: Window): void;
 
     relativeGeometryChanged: Signal<() => void>;
     absoluteGeometryChanged: Signal<() => void>;
