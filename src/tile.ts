@@ -3,6 +3,7 @@ import Signal from "./qt/signal";
 
 import Window from "./window";
 import {LayoutDirection, Edge} from "./enums";
+import QPoint from "./qt/qpoint";
 
 export default interface Tile {
     relativeGeometry: QRect;
@@ -23,6 +24,7 @@ export default interface Tile {
     split(direction: LayoutDirection): void;
     manage(window: Window): void;
     unmanage(window: Window): void;
+    pick(point: QPoint): Tile | null;
 
     relativeGeometryChanged: Signal<() => void>;
     absoluteGeometryChanged: Signal<() => void>;
