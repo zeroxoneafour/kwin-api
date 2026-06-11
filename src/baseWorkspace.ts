@@ -1,16 +1,15 @@
-import QPoint from "./qt/qpoint";
-import QRect from "./qt/qrect";
-import QSize from "./qt/qsize";
-import Signal from "./qt/signal";
+import { QPoint, QRect, QSize, Signal } from "./qt";
 
-import VirtualDesktop from "./virtualdesktop";
-import Window from "./window";
-import Output from "./output";
-import TileManager from "./tilemanager";
-import {ClientAreaOption} from "./enums";
-import Tile from "./tile";
+import { VirtualDesktop } from "./virtualdesktop";
+import { Window } from "./window";
+import { Output } from "./output";
+import { TileManager } from "./tilemanager";
+import { ClientAreaOption } from "./enums";
+import { Tile } from "./tile";
 
-export default interface BaseWorkspace {
+export type Activity = string;
+
+export interface BaseWorkspace {
     desktops: VirtualDesktop[];
     currentDesktop: VirtualDesktop;
     activeWindow: Window | null;
@@ -18,8 +17,8 @@ export default interface BaseWorkspace {
     workspaceSize: QSize;
     activeScreen: Output;
     screens: Output[];
-    currentActivity: string;
-    activities: string[];
+    currentActivity: Activity;
+    activities: Activity[];
     virtualScreenSize: QSize;
     virtualScreenGeometry: QRect;
     stackingOrder: Window[];
@@ -29,6 +28,7 @@ export default interface BaseWorkspace {
     showOutline(): void;
     hideOutline(): void;
     screenAt(point: QPoint): Output;
+    /// DEPRECATED - use rootTile() instead
     tilingForScreen(screen: Output): TileManager;
     clientArea(options: ClientAreaOption, output: Output): QRect;
     clientArea(options: ClientAreaOption, client: Window): QRect;
@@ -49,10 +49,10 @@ export default interface BaseWorkspace {
     desktopsChanged: Signal<() => void>;
     desktopLayoutChanged: Signal<() => void>;
     screensChanged: Signal<() => void>;
-    currentActivityChanged: Signal<(id: string) => void>;
-    activitiesChanged: Signal<(id: string) => void>;
-    activityAdded: Signal<(id: string) => void>;
-    activityRemoved: Signal<(id: string) => void>;
+    currentActivityChanged: Signal<(id: Activity) => void>;
+    activitiesChanged: Signal<(id: Activity) => void>;
+    activityAdded: Signal<(id: Activity) => void>;
+    activityRemoved: Signal<(id: Activity) => void>;
     virtualScreenSizeChanged: Signal<() => void>;
     currentDesktopChanged: Signal<(previousDesktop: VirtualDesktop, currentDesktop: VirtualDesktop, output: Output) => void>;
     cursorPosChanged: Signal<() => void>;

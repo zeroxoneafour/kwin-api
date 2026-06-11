@@ -1,2 +1,3 @@
-type QIcon = object;
-export default QIcon;
+import { QObject } from "./qobject";
+
+export type QIcon = QObject;

@@ -1,10 +1,13 @@
-import QPoint from "./qt/qpoint";
-import Signal from "./qt/signal";
+// ALL DEPRECATED (but still in API), DO NOT USE! Favor rootTile.pick() and workspace.rootTile()
 
-import TileModel from "./tilemodel";
-import Tile from "./tile";
+import { QPoint, Signal } from "./qt";
 
-export default interface TileManager {
+import { Tile } from "./tile";
+
+// idk what this is exactly but it exists ig
+export type TileModel = object;
+
+export interface TileManager {
     rootTile: Tile;
     model: TileModel;
 

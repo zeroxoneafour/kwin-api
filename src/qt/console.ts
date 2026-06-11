@@ -4,7 +4,7 @@
  * Note that by default, KWin will only show messages of type "info" or greater.  
  * There _should_ be a setting in KDebugSettings that will change this, but I'm not really looking for it.
  */
-export default interface Console {
+export interface Console {
     debug(...args: any[]): void;
     log(...args: any[]): void;
     info(...args: any[]): void;

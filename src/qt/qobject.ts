@@ -1,3 +1,3 @@
-export default interface QObject {
+export interface QObject {
     destroy(): void;
 }

@@ -1,7 +1,6 @@
-import QRect from "./qt/qrect";
-import Signal from "./qt/signal";
+import { QRect, Signal } from "./qt";
 
-export default interface Output {
+export interface Output {
     geometry: QRect;
     devicePixelRatio: number;
     name: string;

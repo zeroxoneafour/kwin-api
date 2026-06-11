@@ -1,17 +1,8 @@
-import QPoint from "./qpoint";
-import QRect from "./qrect";
-import QSize from "./qsize";
-import QIcon from "./qicon";
-import QUuid from "./quuid";
-import QTimer from "./qtimer";
-import Signal from "./signal";
-
-export {
-    QPoint,
-    QRect,
-    QSize,
-    QIcon,
-    QUuid,
-    QTimer,
-    Signal
-}
+export { QPoint } from "./qpoint";
+export { QRect } from "./qrect";
+export { QSize } from "./qsize";
+export { QIcon } from "./qicon";
+export { QUuid } from "./quuid";
+export { QTimer } from "./qtimer";
+export { Signal } from "./signal";
+export { Console } from "./console";

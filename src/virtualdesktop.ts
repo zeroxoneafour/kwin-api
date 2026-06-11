@@ -1,6 +1,6 @@
-import Signal from "./qt/signal";
+import { Signal } from "./qt";
 
-export default interface VirtualDesktop {
+export interface VirtualDesktop {
     id: string;
     x11DesktopNumber: number;
     name: string;

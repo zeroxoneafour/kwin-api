@@ -1,3 +1,3 @@
-export default interface KWin {
+export interface KWin {
     readConfig<T>(property: string, defaultValue: T): T;
 }

@@ -1,2 +1,1 @@
-type QUuid = object;
-export default QUuid;
+export type QUuid = object;

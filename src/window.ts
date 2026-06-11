@@ -1,16 +1,12 @@
-import QRect from "./qt/qrect";
-import QPoint from "./qt/qpoint";
-import QSize from "./qt/qsize";
-import QUuid from "./qt/quuid";
-import Signal from "./qt/signal";
-import QIcon from "./qt/qicon";
+import { QRect, QPoint, QSize, QUuid, QIcon, Signal } from "./qt";
 
-import Output from "./output";
-import Tile from "./tile";
-import VirtualDesktop from "./virtualdesktop";
-import {MaximizeMode} from "./enums";
+import { Output } from "./output";
+import { Tile } from "./tile";
+import { VirtualDesktop } from "./virtualdesktop";
+import { MaximizeMode } from "./enums";
+import { Activity } from "./baseWorkspace";
 
-export default interface Window {
+export interface Window {
     bufferGeometry: QRect;
     clientGeometry: QRect;
     pos: QPoint;
@@ -56,7 +52,7 @@ export default interface Window {
     active: boolean;
     desktops: VirtualDesktop[];
     onAllDesktops: boolean;
-    activities: string[];
+    activities: Activity[];
     skipTaskbar: boolean;
     skipPager: boolean;
     skipSwitcher: boolean;

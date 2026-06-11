@@ -1,4 +1,4 @@
-export default interface QPoint {
+export interface QPoint {
     x: number;
     y: number;
 }

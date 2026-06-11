@@ -1,6 +1,6 @@
-import Signal from "../qt/signal";
+import { Signal } from "../qt";
 
-export default interface ShortcutHandler {
+export interface ShortcutHandler {
     name: string;
     text: string;
     sequence: string;

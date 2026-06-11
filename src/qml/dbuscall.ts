@@ -1,6 +1,6 @@
-import Signal from "../qt/signal";
+import { Signal } from "../qt";
 
-export default interface DBusCall {
+export interface DBusCall {
     dbusInterface: string;
     service: string;
     path: string;

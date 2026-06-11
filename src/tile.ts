@@ -1,11 +1,9 @@
-import QRect from "./qt/qrect";
-import Signal from "./qt/signal";
+import { QPoint, QRect, Signal } from "./qt";
 
-import Window from "./window";
-import {LayoutDirection, Edge} from "./enums";
-import QPoint from "./qt/qpoint";
+import { Window } from "./window";
+import { LayoutDirection, Edge } from "./enums";
 
-export default interface Tile {
+export interface Tile {
     relativeGeometry: QRect;
     absoluteGeometry: QRect;
     absoluteGeometryInScreen: QRect;
