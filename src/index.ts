@@ -3,6 +3,7 @@ export { Options } from "./options";
 export { KWin } from "./kwin";
 
 export { VirtualDesktop } from "./virtualdesktop";
+export { Activity } from "./baseWorkspace";
 export { Output }  from "./output";
 export { TileManager, TileModel } from "./tilemanager";
 export { Tile } from "./tile";
