@@ -6,3 +6,5 @@ export { QUuid } from "./quuid";
 export { QTimer } from "./qtimer";
 export { Signal } from "./signal";
 export { Console } from "./console";
+export { QObject } from "./qobject";
+export { Qt } from "./qt";

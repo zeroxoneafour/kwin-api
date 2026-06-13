@@ -1,6 +1,6 @@
-import { Signal } from "../qt";
+import { QObject, Signal } from "../qt";
 
-export interface DBusCall {
+export interface DBusCall extends QObject {
     dbusInterface: string;
     service: string;
     path: string;
