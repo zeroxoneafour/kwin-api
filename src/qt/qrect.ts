@@ -1,6 +1,11 @@
-import { QPoint } from "./qpoint";
-import { QSize } from "./qsize";
+export interface QRect {
+    x: number;
+    y: number;
+    width: number;
+    height: number;
 
-export interface QRect extends QPoint, QSize {
-    // nothing else to say
+    readonly left: number;
+    readonly right: number;
+    readonly top: number;
+    readonly bottom: number;
 }

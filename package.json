@@ -1,6 +1,6 @@
 {
   "name": "kwin-api",
-  "version": "6.6.0",
+  "version": "6.7.0",
   "description": "KWin Scripting API (TypeScript Bindings)",
   "exports": {
     ".": "./src/index.ts",
