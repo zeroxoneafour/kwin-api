@@ -93,10 +93,11 @@ export interface Window {
     demandsAttention: boolean;
     frameGeometry: QRect;
     noBorder: boolean;
+    get tile(): Tile | null;
     /**
-     * @deprecated Use tile.manage() instead!
+     * @deprecated Use tile.manage() instead (for setting)
      */
-    tile: Tile | null;
+    set tile(v: Tile | null);
  
     closeWindow(): void;
     //setReadyForPainting(): void;
