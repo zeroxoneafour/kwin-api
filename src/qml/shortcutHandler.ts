@@ -5,5 +5,5 @@ export interface ShortcutHandler extends QObject {
     text: string;
     sequence: string;
     
-    activated: Signal<() => void>;
+    readonly activated: Signal<() => void>;
 }

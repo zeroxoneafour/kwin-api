@@ -7,12 +7,15 @@ import { Tile } from "./tile";
 // idk what this is exactly but it exists ig
 export type TileModel = object;
 
+/**
+ * @deprecated Use rootTile().pick() instead!
+ */
 export interface TileManager {
-    rootTile: Tile;
-    model: TileModel;
+    readonly rootTile: Tile;
+    readonly model: TileModel;
 
     bestTileForPosition(pos: QPoint): Tile;
     bestTileForPosition(x: number, y: number): Tile;
 
-    tileRemoved: Signal<(tile: Tile) => void>;
+    readonly tileRemoved: Signal<(tile: Tile) => void>;
 }

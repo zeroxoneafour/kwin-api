@@ -9,6 +9,6 @@ export interface DBusCall extends QObject {
 
     call(): void;
 
-    finished: Signal<(returnValue: any[]) => void>;
-    failed: Signal<() => void>;
+    readonly finished: Signal<(returnValue: any[]) => void>;
+    readonly failed: Signal<() => void>;
 }

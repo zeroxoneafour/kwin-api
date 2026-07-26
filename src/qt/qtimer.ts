@@ -13,5 +13,5 @@ export interface QTimer extends QObject {
 
     stop(): void;
 
-    triggered: Signal<() => void>;
+    readonly triggered: Signal<() => void>;
 }
