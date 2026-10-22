@@ -42,7 +42,10 @@ export interface BaseWorkspace {
     getClient(id: QUuid): Window;
     windowAt(point: QPoint, count?: number): Window[];
     isEffectActive(id: string): boolean;
+
     rootTile(output: Output, desktop: VirtualDesktop): Tile;
+    currentDesktopForScreen(screen: Output): VirtualDesktop;
+    setCurrentDesktopForScreen(desktop: VirtualDesktop, output: Output): void;
 
     readonly windowAdded: Signal<(window: Window) => void>;
     readonly windowRemoved: Signal<(window: Window) => void>;
