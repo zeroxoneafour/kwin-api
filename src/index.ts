@@ -6,6 +6,6 @@ export { VirtualDesktop } from "./virtualdesktop";
 export { Activity } from "./baseWorkspace";
 export { Output }  from "./output";
 export { TileManager, TileModel } from "./tilemanager";
-export { Tile } from "./tile";
+export { Tile, RootTile } from "./tile";
 export { Window } from "./window";
 export { LayoutDirection, ClientAreaOption, Edge, MaximizeMode } from "./enums";

@@ -94,11 +94,12 @@ export interface Window {
     frameGeometry: QRect;
     noBorder: boolean;
     get tile(): Tile | null;
+
     /**
      * @deprecated Use tile.manage() instead (for setting)
      */
     set tile(v: Tile | null);
- 
+
     closeWindow(): void;
     //setReadyForPainting(): void;
     setMaximize(vertical: boolean, horizontal: boolean): void;

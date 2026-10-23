@@ -5,7 +5,7 @@ import { Window } from "./window";
 import { Output } from "./output";
 import { TileManager } from "./tilemanager";
 import { ClientAreaOption } from "./enums";
-import { Tile } from "./tile";
+import { RootTile, Tile } from "./tile";
 
 export type Activity = string;
 
@@ -43,7 +43,7 @@ export interface BaseWorkspace {
     windowAt(point: QPoint, count?: number): Window[];
     isEffectActive(id: string): boolean;
 
-    rootTile(output: Output, desktop: VirtualDesktop): Tile;
+    rootTile(output: Output, desktop: VirtualDesktop): RootTile;
     currentDesktopForScreen(screen: Output): VirtualDesktop;
     setCurrentDesktopForScreen(desktop: VirtualDesktop, output: Output): void;
 

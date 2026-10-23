@@ -2,7 +2,7 @@
 
 import { QPoint, Signal } from "./qt";
 
-import { Tile } from "./tile";
+import { RootTile, Tile } from "./tile";
 
 // idk what this is exactly but it exists ig
 export type TileModel = object;
@@ -11,7 +11,7 @@ export type TileModel = object;
  * @deprecated Use rootTile().pick() instead!
  */
 export interface TileManager {
-    readonly rootTile: Tile;
+    readonly rootTile: RootTile;
     readonly model: TileModel;
 
     bestTileForPosition(pos: QPoint): Tile;

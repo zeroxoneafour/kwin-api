@@ -12,8 +12,8 @@ export interface Tile {
     readonly windows: Window[];
     readonly isLayout: boolean;
     readonly canBeRemoved: boolean;
-    readonly layoutDirection: LayoutDirection;
 
+    layoutDirection: LayoutDirection;
     relativeGeometry: QRect;
     padding: number;
 
@@ -23,7 +23,6 @@ export interface Tile {
     split(direction: LayoutDirection): void;
     manage(window: Window): void;
     unmanage(window: Window): void;
-    pick(point: QPoint): Tile | null;
 
     readonly relativeGeometryChanged: Signal<() => void>;
     readonly absoluteGeometryChanged: Signal<() => void>;
@@ -37,4 +36,9 @@ export interface Tile {
     readonly windowsChanged: Signal<() => void>;
     readonly layoutDirectionChanged: Signal<() => void>;
     readonly layoutModified: Signal<() => void>;
+}
+
+export interface RootTile extends Tile {
+    readonly parent: null;
+    pick(point: QPoint): Tile | null;
 }
